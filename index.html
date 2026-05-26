@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JP &amp; HP Consulting — L'Expertise 360°</title>
+
+  <!-- Assets -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+
+  <!-- Fonts & styles (see css/styles.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- =============================================================================
+     NAVIGATION — Fixed pill bar + mobile drawer
+     ============================================================================= -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <img src="assets/logo.png" alt="JP &amp; HP Consulting" style="height:54px;display:block">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#hero" class="active" data-nav="hero">Accueil</a></li>
+    <li class="nav-item" id="navServices">
+      <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-haspopup="true" id="navDropBtn">
+        Services
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul class="nav-dropdown" role="menu">
+        <li><a href="#services" role="menuitem" data-nav="services">Vue d'ensemble</a></li>
+        <li><a href="#sellin" role="menuitem" data-nav="sellin">Sell-In</a></li>
+        <li><a href="#sellout" role="menuitem" data-nav="sellout">Sell-Out</a></li>
+        <li><a href="#digital" role="menuitem" data-nav="digital">Digital · LSR</a></li>
+        <li><a href="#media" role="menuitem" data-nav="media">Médias · Stratego</a></li>
+      </ul>
+    </li>
+    <li><a href="#vision" data-nav="vision">Approche</a></li>
+    <li><a href="#realisations" data-nav="realisations">Réalisations</a></li>
+    <li><a href="#experts" data-nav="experts">Équipe</a></li>
+    <li><a href="#marques" data-nav="marques">Marques</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#contact" class="nav-cta btn-primary">Nous contacter</a>
+  </div>
+  <button class="burger" id="burgerBtn" type="button" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu (overlay + panel) -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+<div class="mob" id="mobMenu" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <a href="#hero" onclick="closeMenu()">Accueil</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#vision" onclick="closeMenu()">Approche</a>
+  <a href="#sellin" onclick="closeMenu()">Sell-In</a>
+  <a href="#sellout" onclick="closeMenu()">Sell-Out</a>
+  <a href="#digital" onclick="closeMenu()">Digital</a>
+  <a href="#media" onclick="closeMenu()">Médias</a>
+  <a href="#realisations" onclick="closeMenu()">Réalisations</a>
+  <a href="#experts" onclick="closeMenu()">Équipe</a>
+  <a href="#marques" onclick="closeMenu()">Marques</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#contact" class="mob-cta" onclick="closeMenu()">Nous contacter</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="hero-badge">Expertise 360° · Beauté &amp; Pharma</div>
+    <h1 class="hero-h1">Nous accompagnons votre <span class="g">Marque</span> vers l'excellence <span class="g">360°</span></h1>
+    <p class="hero-lead">JP &amp; HP Consulting — Direction Commerciale &amp; Excellence Opérationnelle. Sell-In, Sell-Out, Digital &amp; Médias pour les marques beauté, soin et wellness.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary btn-lime">
+        Prendre rendez-vous
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-secondary" style="background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff">
+        Découvrir nos services
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats-wrap">
+    <div class="hero-stats-grid stats-grid" aria-label="Chiffres clés">
+      <div class="stat-card fu">
+        <div class="stat-num">+100</div>
+        <div class="stat-lbl">Agents commerciaux</div>
+      </div>
+      <div class="stat-card fu" style="transition-delay:.1s">
+        <div class="stat-num">360°</div>
+        <div class="stat-lbl">Couverture marché</div>
+      </div>
+      <div class="stat-card fu" style="transition-delay:.2s">
+        <div class="stat-num">30</div>
+        <div class="stat-lbl">Conseillères beauté</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRANDS ══ -->
+<section id="brands">
+  <div class="brands-lbl">Ils nous font confiance</div>
+  <div class="brands-row">
+    <span class="brand">Darphin</span>
+    <span class="brand">Estée Lauder</span>
+    <span class="brand">Alès Groupe</span>
+    <span class="brand">Schweppes</span>
+    <span class="brand">Yoplait</span>
+    <span class="brand">Office Depot</span>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="svc-inner fu">
+    <header class="section-head svc-head">
+      <span class="eyebrow">Écosystème 360°</span>
+      <h2>Façonner l'Avenir<br>de votre <strong>Croissance</strong></h2>
+      <p class="lead">Sell-In, Sell-Out, Digital &amp; Médias — l'ensemble des leviers activés pour transformer votre marque en leader de son marché.</p>
+    </header>
+    <div class="steps-grid">
+      <div class="step-item fu">
+        <div class="step-outer">
+          <div class="step-photo">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80" alt="Sell-In" loading="lazy">
+          </div>
+          <span class="step-num">01</span>
+        </div>
+        <h3 class="step-title">Sell-In</h3>
+        <p class="step-desc">Implantation &amp; réseau national de +100 agents commerciaux sur tout le territoire.</p>
+      </div>
+      <div class="step-item fu" style="transition-delay:.1s">
+        <div class="step-outer">
+          <div class="step-photo">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Sell-Out" loading="lazy">
+          </div>
+          <span class="step-num">02</span>
+        </div>
+        <h3 class="step-title">Sell-Out</h3>
+        <p class="step-desc">Activation point de vente &amp; formation terrain — 30 conseillères beauté déployées.</p>
+      </div>
+      <div class="step-item fu" style="transition-delay:.2s">
+        <div class="step-outer">
+          <div class="step-photo">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&q=80" alt="Digital LSR" loading="lazy">
+          </div>
+          <span class="step-num">03</span>
+        </div>
+        <h3 class="step-title">Digital · LSR</h3>
+        <p class="step-desc">Social Ads, UGC, e-commerce beauté, e-réputation par LSR Agence.</p>
+      </div>
+      <div class="step-item fu" style="transition-delay:.3s">
+        <div class="step-outer">
+          <div class="step-photo">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Médias Stratego" loading="lazy">
+          </div>
+          <span class="step-num">04</span>
+        </div>
+        <h3 class="step-title">Médias · Stratego</h3>
+        <p class="step-desc">Visibilité indoor et outdoor, ciblage précis et ROI optimisé par Yann Tanguy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NOTRE VISION (50/50 split) ══ -->
+<section id="vision">
+  <div class="vision-img fu">
+    <img src="assets/hero.png" alt="Équipe professionnelle">
+    <div class="vision-lime-card">
+      <div class="vlc-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+        <span class="vlc-arrow">&nearr;</span>
+      </div>
+      <div class="vlc-text">Accompagner votre Marque vers l'Excellence.</div>
+    </div>
+  </div>
+  <div class="vision-content fu">
+    <header class="section-head section-head--left section-head--dark" style="margin-bottom:28px">
+      <span class="eyebrow" style="color:var(--accent)">Notre approche</span>
+      <h2>Nous Créons des Solutions<br>Commerciales <em>Innovantes.</em></h2>
+      <p class="lead vision-desc">Engagés à livrer des résultats mesurables et à construire des relations durables fondées sur la confiance, l'innovation et le succès partagé.</p>
+    </header>
+    <div class="vision-checks">
+      <div class="vision-check">
+        <div class="vision-check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Maillage officinal complet sur toute la France</span>
+      </div>
+      <div class="vision-check">
+        <div class="vision-check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Gestion multiculturelle des marques et équipes</span>
+      </div>
+      <div class="vision-check">
+        <div class="vision-check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Feuille de route commerciale adaptée à chaque marque</span>
+      </div>
+    </div>
+    <a href="#contact" class="btn-secondary btn-dark-pill">
+      <span class="bdc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+      En savoir plus
+    </a>
+  </div>
+</section>
+
+<!-- ══ SELL-IN ══ -->
+<section id="sellin">
+  <div class="feat-grid">
+    <div class="fu">
+      <div class="eyebrow">01 — Sell-In</div>
+      <h2 class="sec-title">Implantation<br>et <strong>Réseau national</strong></h2>
+      <p class="sec-body">Force de frappe nationale couvrant l'ensemble du territoire français avec un maillage officinal complet et une gestion multiculturelle des marques.</p>
+      <div class="metric-chip"><span class="metric-chip-num">+100</span><span class="metric-chip-label">agents commerciaux sur le territoire</span></div>
+      <ul class="feat-list">
+        <li><span class="feat-dot"></span>Maillage officinal complet sur toute la France</li>
+        <li><span class="feat-dot"></span>Gestion multiculturelle des marques et des équipes</li>
+        <li><span class="feat-dot"></span>Feuille de route et politique de moyens adaptées à chaque marque</li>
+      </ul>
+      <a href="#sellout" class="link-cta">Découvrir le Sell-Out &rarr;</a>
+    </div>
+    <div class="fu" style="transition-delay:.15s">
+      <div class="vis-box">
+        <img src="assets/rayon.png"" alt="Rayon beauté — pharmacie">
+        <span class="vis-cap">Rayon beauté — pharmacie &amp; parfumerie</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SELL-OUT ══ -->
+<section id="sellout">
+  <div class="sout-inner">
+    <header class="section-head sout-hd fu">
+      <span class="eyebrow">02 — Sell-Out</span>
+      <h2>Activation et <strong>Formation</strong></h2>
+      <p class="lead">Sous l'impulsion d'Isabelle Grasset et Véronique Patti, nous transformons chaque point de vente en vecteur de croissance durable.</p>
+    </header>
+    <div class="sout-grid">
+      <div class="sout-card fu">
+        <div class="sout-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <div class="sout-title">30 Conseillères Beauté</div>
+        <div class="sout-body">Recrutement &amp; animation point de vente — réseau pilotage France par Véronique Patti. Déploiement national coordonné.</div>
+        <div class="sout-arrow">&rarr;</div>
+      </div>
+      <div class="sout-card fu" style="transition-delay:.12s">
+        <div class="sout-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <div class="sout-title">Formation Phygitale</div>
+        <div class="sout-body">Modules présentiel en officine et e-learning. Maîtrise des protocoles de soin &amp; conseil développée par Isabelle Grasset, ex-Darphin.</div>
+        <div class="sout-arrow">&rarr;</div>
+      </div>
+      <div class="sout-card fu" style="transition-delay:.24s">
+        <div class="sout-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="sout-title">Objectif Fidélisation</div>
+        <div class="sout-body">Transformer chaque visite en vente et fidéliser durablement. Suivi KPIs, reporting et ajustement continu des dispositifs.</div>
+        <div class="sout-arrow">&rarr;</div>
+      </div>
+    </div>
+    <div class="sout-ft fu">
+      <a href="#digital" class="link-cta">Découvrir le Digital &amp; LSR &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DIGITAL ══ -->
+<section id="digital">
+  <div class="digital-grid">
+    <div class="fu" style="order:2">
+      <div class="eyebrow">03 — Digital &middot; LSR Agence</div>
+      <h2 class="sec-title">Conversion<br>et <strong>Visibilité</strong></h2>
+      <p class="sec-body">Construire une marque aujourd'hui est impossible sans une stratégie digitale robuste. Odette Nahami et son équipe LSR Agence prennent en charge l'intégralité de votre présence digitale.</p>
+      <ul class="feat-list">
+        <li><span class="feat-dot"></span><strong class="feat-strong">Sites internet orientés ventes</strong> — conception, développement e-commerce beauté</li>
+        <li><span class="feat-dot"></span><strong class="feat-strong">UGC, Influence &amp; Social Ads</strong> — contenus créateurs, publicités sociales, stratégie plateformes</li>
+        <li><span class="feat-dot"></span><strong class="feat-strong">Newsletters &amp; E-réputation</strong> — CRM, gestion avis, notoriété en ligne</li>
+      </ul>
+      <a href="#media" class="link-cta digital-ft">Découvrir les Médias Stratego &rarr;</a>
+    </div>
+    <div class="fu" style="order:1;transition-delay:.15s">
+      <div class="funnel-wrap" role="img" aria-label="Digital Marketing Funnel">
+        <div class="funnel-inner">
+          <div class="funnel-col-head" data-pct="100%">
+            <span class="funnel-col-label">Awareness</span>
+            <span class="funnel-col-value">Notoriété de marque</span>
+          </div>
+          <div class="funnel-col-head" data-pct="85%">
+            <span class="funnel-col-label">Interest</span>
+            <span class="funnel-col-value">Contenu &amp; engagement</span>
+          </div>
+          <div class="funnel-col-head" data-pct="70%">
+            <span class="funnel-col-label">Consideration</span>
+            <span class="funnel-col-value">UGC, influence</span>
+          </div>
+          <div class="funnel-col-head" data-pct="55%">
+            <span class="funnel-col-label">Conversion</span>
+            <span class="funnel-col-value">Social Ads, SEO</span>
+          </div>
+          <div class="funnel-col-head" data-pct="40%">
+            <span class="funnel-col-label">Retention</span>
+            <span class="funnel-col-value">CRM, newsletters</span>
+          </div>
+          <div class="funnel-col-head" data-pct="25%">
+            <span class="funnel-col-label">Repeat Sales</span>
+            <span class="funnel-col-value">Fidélisation</span>
+          </div>
+          <div class="funnel-svg-cell">
+            <svg class="funnel-svg" viewBox="0 0 720 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="120" y1="0" x2="120" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+              <line x1="240" y1="0" x2="240" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+              <line x1="360" y1="0" x2="360" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+              <line x1="480" y1="0" x2="480" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+              <line x1="600" y1="0" x2="600" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+              <path d="M3 160 L3 16 C60 16 60 26.8 117 26.8 L117 149.2 C60 149.2 60 160 3 160Z" fill="#daf58a"/>
+              <path d="M123 149.2 L123 26.8 C180 26.8 180 37.6 237 37.6 L237 138.4 C180 138.4 180 149.2 123 149.2Z" fill="#c5f135"/>
+              <path d="M243 138.4 L243 37.6 C300 37.6 300 48.4 357 48.4 L357 127.6 C300 127.6 300 138.4 243 138.4Z" fill="#8fbd1a"/>
+              <path d="M363 127.6 L363 48.4 C420 48.4 420 59.2 477 59.2 L477 116.8 C420 116.8 420 127.6 363 127.6Z" fill="#4a8a2a"/>
+              <path d="M483 116.8 L483 59.2 C540 59.2 540 70 597 70 L597 106 C540 106 540 116.8 483 116.8Z" fill="#2d6b3a"/>
+              <path d="M603 106 L603 70 L717 70 L717 106Z" fill="#1a4731"/>
+              <text class="funnel-pct-txt" x="12" y="14">100%</text>
+              <text class="funnel-pct-txt" x="132" y="24">85%</text>
+              <text class="funnel-pct-txt" x="252" y="34">70%</text>
+              <text class="funnel-pct-txt" x="372" y="44">55%</text>
+              <text class="funnel-pct-txt" x="492" y="54">40%</text>
+              <text class="funnel-pct-txt" x="612" y="64">25%</text>
+            </svg>
+          </div>
+        </div>
+        <svg class="funnel-svg-v" viewBox="0 0 280 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="0" y1="80" x2="280" y2="80" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+          <line x1="0" y1="160" x2="280" y2="160" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+          <line x1="0" y1="240" x2="280" y2="240" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+          <line x1="0" y1="320" x2="280" y2="320" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+          <line x1="0" y1="400" x2="280" y2="400" stroke="rgba(0,0,0,.09)" stroke-width="1"/>
+          <path d="M0,0 L280,0 L259,80 L21,80 Z" fill="#daf58a"/>
+          <path d="M21,80 L259,80 L238,160 L42,160 Z" fill="#c5f135"/>
+          <path d="M42,160 L238,160 L217,240 L63,240 Z" fill="#8fbd1a"/>
+          <path d="M63,240 L217,240 L196,320 L84,320 Z" fill="#4a8a2a"/>
+          <path d="M84,320 L196,320 L175,400 L105,400 Z" fill="#2d6b3a"/>
+          <path d="M105,400 L175,400 L175,480 L105,480 Z" fill="#1a4731"/>
+          <text x="140" y="30" text-anchor="middle" font-size="9.5" font-weight="700" fill="#111" font-family="Urbanist,sans-serif" letter-spacing="0.08em">AWARENESS</text>
+          <text x="140" y="46" text-anchor="middle" font-size="12" font-weight="500" fill="#333" font-family="Urbanist,sans-serif">Notoriété de marque</text>
+          <text x="140" y="64" text-anchor="middle" font-size="14" font-weight="800" fill="#1a4731" font-family="Urbanist,sans-serif">100%</text>
+          <text x="140" y="110" text-anchor="middle" font-size="9.5" font-weight="700" fill="#111" font-family="Urbanist,sans-serif" letter-spacing="0.08em">INTEREST</text>
+          <text x="140" y="126" text-anchor="middle" font-size="12" font-weight="500" fill="#333" font-family="Urbanist,sans-serif">Contenu &amp; engagement</text>
+          <text x="140" y="144" text-anchor="middle" font-size="14" font-weight="800" fill="#1a4731" font-family="Urbanist,sans-serif">85%</text>
+          <text x="140" y="190" text-anchor="middle" font-size="9.5" font-weight="700" fill="#111" font-family="Urbanist,sans-serif" letter-spacing="0.08em">CONSIDERATION</text>
+          <text x="140" y="206" text-anchor="middle" font-size="12" font-weight="500" fill="#333" font-family="Urbanist,sans-serif">UGC, influence</text>
+          <text x="140" y="224" text-anchor="middle" font-size="14" font-weight="800" fill="#1a4731" font-family="Urbanist,sans-serif">70%</text>
+          <text x="140" y="270" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff" font-family="Urbanist,sans-serif" letter-spacing="0.08em">CONVERSION</text>
+          <text x="140" y="286" text-anchor="middle" font-size="12" font-weight="500" fill="rgba(255,255,255,.85)" font-family="Urbanist,sans-serif">Social Ads, SEO</text>
+          <text x="140" y="304" text-anchor="middle" font-size="14" font-weight="800" fill="#c5f135" font-family="Urbanist,sans-serif">55%</text>
+          <text x="140" y="350" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" font-family="Urbanist,sans-serif" letter-spacing="0.07em">RETENTION</text>
+          <text x="140" y="366" text-anchor="middle" font-size="9" font-weight="500" fill="rgba(255,255,255,.85)" font-family="Urbanist,sans-serif">CRM, newsletters</text>
+          <text x="140" y="384" text-anchor="middle" font-size="14" font-weight="800" fill="#c5f135" font-family="Urbanist,sans-serif">40%</text>
+          <text x="140" y="430" text-anchor="middle" font-size="8" font-weight="700" fill="#fff" font-family="Urbanist,sans-serif" letter-spacing="0.05em">REPEAT SALES</text>
+          <text x="140" y="446" text-anchor="middle" font-size="9" font-weight="500" fill="rgba(255,255,255,.85)" font-family="Urbanist,sans-serif">Fidélisation</text>
+          <text x="140" y="464" text-anchor="middle" font-size="14" font-weight="800" fill="#c5f135" font-family="Urbanist,sans-serif">25%</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MEDIAS ══ -->
+<section id="media">
+  <div class="media-inner">
+    <header class="section-head media-hd fu">
+      <span class="eyebrow">04 — Médias &middot; Stratego</span>
+      <h2>Visibilité <strong>Indoor et Outdoor</strong></h2>
+      <p class="lead">Sous la direction de Yann Tanguy, Stratego déploie votre visibilité média sur les zones stratégiques avec un ciblage précis et un ROI optimisé.</p>
+    </header>
+    <div class="media-grid">
+      <div class="media-card fu">
+        <div class="media-pre">Dispositif</div>
+        <div class="media-title">Indoor et<br>Outdoor</div>
+        <div class="media-body">Déploiement de votre visibilité média sur les zones de chalandise stratégiques — centres commerciaux, pharmacies, gares, affichage urbain premium. Formats grand format et digital out-of-home.</div>
+      </div>
+      <div class="media-card fu" style="transition-delay:.15s">
+        <div class="media-pre">Stratégie</div>
+        <div class="media-title">Ciblage<br>Précis</div>
+        <div class="media-body">Stratégies médias adaptées aux budgets clients pour un impact visuel maximal et un ROI optimisé. Analyse de performance, heat mapping géographique et ajustement continu des dispositifs.</div>
+      </div>
+    </div>
+    <div class="media-banner fu" style="transition-delay:.2s">
+      <img src="assets/pic.png" alt="Campagnes LED grand format — façades prestige">
+      <span class="media-banner-cap">Campagnes LED grand format — façades prestige</span>
+    </div>
+    <div class="media-ft fu">
+      <a href="#realisations" class="link-cta">Voir nos réalisations &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NOS REALISATIONS ══ -->
+<section id="realisations">
+  <header class="section-head real-header fu">
+    <span class="eyebrow">Études de cas</span>
+    <h2>Des Stratégies qui Transforment<br>votre Marque</h2>
+    <p class="lead">Beauté, pharmacie et wellness — des dispositifs Sell-In, Sell-Out et Digital qui génèrent des résultats mesurables.</p>
+  </header>
+  <div class="real-strip">
+    <div class="real-photo" id="real-left">
+      <img id="real-img-left" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy">
+    </div>
+    <div class="real-center">
+      <img id="real-img-center" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+      <div class="real-lime-card" id="real-card">
+        <div class="real-tags" id="real-tags">
+          <span class="real-tag">Sell-In</span>
+          <span class="real-tag">Sell-Out</span>
+        </div>
+        <h3 id="real-title">Stratégie Commerciale 360° pour une Marque en Croissance</h3>
+        <p id="real-desc">Une approche end-to-end — Sell-In pour implanter le réseau officinal, Sell-Out pour activer et fidéliser chaque point de vente sur tout le territoire.</p>
+        <button class="real-plus" aria-label="Voir plus">+</button>
+      </div>
+    </div>
+    <div class="real-photo" id="real-right">
+      <img id="real-img-right" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" alt="" loading="lazy">
+    </div>
+  </div>
+  <div class="real-nav">
+    <button class="real-nav-prev" id="real-prev" aria-label="Précédent">&#9664;</button>
+    <div class="real-dots" id="real-dots"></div>
+    <button class="real-nav-next" id="real-next" aria-label="Suivant">&#9654;</button>
+  </div>
+</section>
+
+<!-- ══ EXPERTISE ══ -->
+<section id="expertise">
+  <header class="section-head exp-hd fu">
+    <span class="eyebrow">Savoir-faire</span>
+    <h2>Notre Expertise</h2>
+    <p class="lead">Par secteur ou par fonction — une couverture complète du retail, du digital et des médias.</p>
+    <div style="margin-top:24px;display:flex;justify-content:center">
+      <div class="exp-toggle">
+        <button class="exp-btn active" onclick="switchTab('secteur',this)">Par Secteur</button>
+        <button class="exp-btn" onclick="switchTab('fonction',this)">Par Fonction</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="exp-body">
+    <div class="exp-panel active" id="tab-secteur">
+      <div class="exp-grid">
+        <div class="exp-item fu">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 4C14 4 4 14 4 26s10 22 22 22 22-10 22-22S38 4 26 4zm0 4c9.9 0 18 8.1 18 18S35.9 44 26 44 8 35.9 8 26 16.1 8 26 8zm0 6a12 12 0 100 24A12 12 0 0026 14zm0 4a8 8 0 110 16A8 8 0 0126 18z" opacity=".9"/>
+            <path d="M26 20a6 6 0 100 12A6 6 0 0026 20z"/>
+          </svg>
+          <div class="exp-item-title">Retail &amp; Pharma</div>
+          <p class="exp-item-body">Maillage officinal complet sur toute la France — réseau parapharmacies, officines et enseignes beauté.</p>
+          <a href="#sellin" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.08s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <path d="M26 6C15 6 6 15 6 26s9 20 20 20 20-9 20-20S37 6 26 6zm0 36c-8.8 0-16-7.2-16-16S17.2 10 26 10s16 7.2 16 16-7.2 16-16 16z" opacity=".35"/>
+            <path d="M26 16a10 10 0 100 20A10 10 0 0026 16zm0 16a6 6 0 110-12 6 6 0 010 12z"/>
+            <circle cx="26" cy="26" r="3"/>
+          </svg>
+          <div class="exp-item-title">Beauté &amp; Wellness</div>
+          <p class="exp-item-body">Marques beauté, soin et wellness — de la pharmacie au luxe industriel.</p>
+          <a href="#marques" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.16s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <rect x="6" y="10" width="40" height="26" rx="4" opacity=".3"/>
+            <rect x="8" y="12" width="36" height="22" rx="3"/>
+            <rect x="18" y="38" width="16" height="3" rx="1.5"/>
+            <rect x="14" y="41" width="24" height="3" rx="1.5" opacity=".5"/>
+          </svg>
+          <div class="exp-item-title">Digital &amp; Social</div>
+          <p class="exp-item-body">Conversion, social media et e-réputation — expertise LSR Agence.</p>
+          <a href="#digital" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.24s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <path d="M8 26h8l6-12 8 22 6-14 4 4h8" stroke="var(--lime)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="exp-item-title">Médias &amp; OOH</div>
+          <p class="exp-item-body">Visibilité indoor et outdoor ciblée — Stratego.</p>
+          <a href="#media" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.32s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <rect x="4" y="22" width="10" height="24" rx="2"/>
+            <rect x="18" y="14" width="10" height="32" rx="2" opacity=".7"/>
+            <rect x="32" y="6" width="10" height="40" rx="2" opacity=".4"/>
+          </svg>
+          <div class="exp-item-title">Data &amp; Performance</div>
+          <p class="exp-item-body">Pilotage KPIs, reporting et analyse continue des performances terrain et digital.</p>
+          <a href="#sellin" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.40s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <circle cx="26" cy="26" r="20" opacity=".25"/>
+            <circle cx="26" cy="26" r="12"/>
+            <circle cx="26" cy="26" r="5" fill="#fff"/>
+          </svg>
+          <div class="exp-item-title">Luxe Industriel</div>
+          <p class="exp-item-body">De la pharmacie au luxe — marques premium et stratégies haut de gamme.</p>
+          <a href="#marques" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-panel" id="tab-fonction">
+      <div class="exp-grid">
+        <div class="exp-item fu">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <path d="M26 4L46 16v20L26 48 6 36V16z" opacity=".3"/>
+            <path d="M26 12L38 20v16L26 44 14 36V20z"/>
+          </svg>
+          <div class="exp-item-title">Direction Commerciale</div>
+          <p class="exp-item-body">Stratégie de vente nationale, management des équipes terrain et pilotage de la performance.</p>
+          <a href="#sellin" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.08s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <rect x="6" y="6" width="18" height="18" rx="3" opacity=".5"/>
+            <rect x="28" y="6" width="18" height="18" rx="3" opacity=".3"/>
+            <rect x="6" y="28" width="18" height="18" rx="3" opacity=".3"/>
+            <rect x="28" y="28" width="18" height="18" rx="3"/>
+          </svg>
+          <div class="exp-item-title">Formation &amp; Excellence</div>
+          <p class="exp-item-body">Modules présentiel et e-learning, maîtrise des protocoles de soin et conseil.</p>
+          <a href="#sellout" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.16s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <path d="M10 42V22l16-12 16 12v20H10z" opacity=".3"/>
+            <path d="M18 42V30h16v12" fill="var(--lime)"/>
+            <circle cx="26" cy="20" r="4"/>
+          </svg>
+          <div class="exp-item-title">Réseau &amp; Distribution</div>
+          <p class="exp-item-body">Implantation et animation du réseau de distribution national — pharmacies, parapharmacies.</p>
+          <a href="#sellin" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.24s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <circle cx="26" cy="26" r="18" opacity=".2"/>
+            <path d="M26 8v36M8 26h36" stroke="var(--lime)" stroke-width="3"/>
+            <circle cx="26" cy="26" r="8"/>
+          </svg>
+          <div class="exp-item-title">Stratégie Digitale</div>
+          <p class="exp-item-body">Social Ads, UGC, influence, e-commerce beauté et CRM marketing.</p>
+          <a href="#digital" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.32s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <rect x="4" y="4" width="44" height="44" rx="8" opacity=".15"/>
+            <rect x="12" y="12" width="28" height="28" rx="4"/>
+            <rect x="20" y="20" width="12" height="12" rx="2" fill="#fff"/>
+          </svg>
+          <div class="exp-item-title">Médias Planning</div>
+          <p class="exp-item-body">Déploiement OOH/DOOH ciblé, optimisation du ROI et stratégie média 360.</p>
+          <a href="#media" class="learn-more">En savoir plus &nbsp;&rarr;</a>
+        </div>
+        <div class="exp-item fu" style="transition-delay:.40s">
+          <svg class="exp-icon" viewBox="0 0 52 52" fill="var(--lime)">
+            <path d="M26 4l6 12h14l-10 10 4 14-14-8-14 8 4-14L6 16h14z" opacity=".4"/>
+            <path d="M26 14l3 7h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z"/>
+          </svg>
+          <div class="exp-item-title">Conseil &amp; Accompagnement</div>
+          <p class="exp-item-body">Accompagnement stratégique sur-mesure, de l'audit à la mise en œuvre opérationnelle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px" class="fu">
+    <a href="#contact" class="link-cta">Parler à un expert &rarr;</a>
+  </div>
+</section>
+
+<!-- ══ EXPERTS / COMITE ══ -->
+<section id="experts">
+  <div class="experts-layout">
+
+    <!-- Left column -->
+    <div class="experts-left-col">
+      <span class="eyebrow-pill fu">Leadership</span>
+      <h2 class="fu" style="transition-delay:.06s">Notre Comité<br>d'Experts</h2>
+      <p class="exp-desc fu" style="transition-delay:.12s">Des profils forgés chez les plus grandes maisons, réunis pour piloter votre performance commerciale.</p>
+      <div class="exp-nav-row fu" style="transition-delay:.18s">
+        <button class="exp-nav-btn" id="expPrev" aria-label="Précédent">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <button class="exp-nav-btn exp-nav-lime" id="expNext" aria-label="Suivant">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: cards carousel -->
+    <div class="experts-carousel-wrap">
+      <div class="experts-track" id="expertsTrack">
+
+        <!-- Card 1: Jean Paul Pinto -->
+        <div class="exp-card-v2 fu">
+          <div class="exp-card-photo" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80')">
+            <div class="exp-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <h4 class="exp-card-name">Jean Paul Pinto</h4>
+            <p class="exp-card-desc">Dirigeant JP &amp; HP. Expert Stratégie Retail &amp; Pharma. Ex-Darphin, Alès Groupe.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Isabelle Grasset -->
+        <div class="exp-card-v2 fu" style="transition-delay:.06s">
+          <div class="exp-card-photo" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80')">
+            <div class="exp-icon-badge exp-icon-lime">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <h4 class="exp-card-name">Isabelle Grasset</h4>
+            <p class="exp-card-desc">Experte Formation &amp; Excellence. Ex-Darphin. Maîtrise du protocole de soin &amp; conseil.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Odette Nahami -->
+        <div class="exp-card-v2 fu" style="transition-delay:.12s">
+          <div class="exp-card-photo" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80')">
+            <div class="exp-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <h4 class="exp-card-name">Odette Nahami</h4>
+            <p class="exp-card-desc">Fondatrice LSR Agence. Experte Digital, Social Media et Conversion UGC.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Yann Tanguy -->
+        <div class="exp-card-v2 fu" style="transition-delay:.18s">
+          <div class="exp-card-photo" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80')">
+            <div class="exp-icon-badge exp-icon-lime">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <h4 class="exp-card-name">Yann Tanguy</h4>
+            <p class="exp-card-desc">Président STRATEGO. Expert Visibilité Média Indoor &amp; Outdoor ciblée.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Véronique Patti -->
+        <div class="exp-card-v2 fu" style="transition-delay:.24s">
+          <div class="exp-card-photo" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80')">
+            <div class="exp-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <h4 class="exp-card-name">Véronique Patti</h4>
+            <p class="exp-card-desc">Synthèse opérationnelle. Pilotage du réseau de conseillères de beauté France.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ MARQUES ══ -->
+<section id="marques">
+  <div class="marques-inner">
+    <header class="section-head marques-hd fu">
+      <span class="eyebrow">Portefeuille</span>
+      <h2>Marques <strong>d'exception</strong></h2>
+      <p class="lead">Une maîtrise des marques issues de cultures et d'approches variées — du dermo-cosmétique au clean beauty, de la pharmacie au luxe industriel.</p>
+    </header>
+    <div class="table-wrap fu" role="region" aria-label="Portefeuille de marques">
+      <table class="marques-table">
+        <thead>
+          <tr>
+            <th scope="col">Catégorie</th>
+            <th scope="col">Marques sous gestion</th>
+            <th scope="col">Expertise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Catégorie"><span class="badge">Maquillage / Soin</span></td>
+            <td data-label="Marques sous gestion">T. LeClerc, Mimosa (Mast Industria Italiana)</td>
+            <td data-label="Expertise" class="td-g">Dermo &amp; Luxe Industriel</td>
+          </tr>
+          <tr>
+            <td data-label="Catégorie"><span class="badge">Capillaire / Solaire</span></td>
+            <td data-label="Marques sous gestion">Rosebaie, Soleil Noir</td>
+            <td data-label="Expertise" class="td-g">Performance &amp; Protection</td>
+          </tr>
+          <tr>
+            <td data-label="Catégorie"><span class="badge">Soin / Wellness</span></td>
+            <td data-label="Marques sous gestion">ADDAX, Archie, YV Cosmétiques, The Qoor</td>
+            <td data-label="Expertise" class="td-g">Pharmacie &amp; Holistique</td>
+          </tr>
+          <tr>
+            <td data-label="Catégorie"><span class="badge">Innovation</span></td>
+            <td data-label="Marques sous gestion">Pure Beauty, Options Beauty, Beauty Colossal</td>
+            <td data-label="Expertise" class="td-g">Clean &amp; New-Gen Beauty</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="marques-ft fu">
+      <a href="#contact" class="link-cta">Rejoindre notre portefeuille &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<section id="cta-band">
+  <h2 class="cta-title fu">L'écosystème commercial <strong>360°</strong> : Sell-In, Sell-Out &amp; Digital.</h2>
+  <a href="#contact" class="btn-primary btn-lime fu" style="transition-delay:.1s">
+    Prendre rendez-vous
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-inner">
+    <header class="section-head contact-hd fu">
+      <span class="eyebrow">Contact</span>
+      <h2>Bâtissons votre futur</h2>
+      <p class="lead">Parlez-nous de votre marque et de vos ambitions. Notre équipe vous répondra dans les 48 heures pour convenir d'un premier échange.</p>
+    </header>
+    <div class="contact-grid">
+      <div class="fu">
+        <div class="c-col-h">Coordonnées</div>
+        <div class="c-items">
+          <div class="c-item">
+            <div class="c-ico">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="c-txt">contact@jphp-consulting.fr<small>Réponse sous 48h ouvrées</small></div>
+          </div>
+          <div class="c-item">
+            <div class="c-ico" style="font-size:13px;font-weight:700">in</div>
+            <div class="c-txt">Jean Paul Pinto<small>LinkedIn — JP &amp; HP Consulting</small></div>
+          </div>
+        </div>
+        <div class="c-col-h">Basés à</div>
+        <div class="c-items">
+          <div class="c-item">
+            <div class="c-ico">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="c-txt">Paris, France<small>Interventions sur tout le territoire national</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="fu" style="transition-delay:.15s">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="fg"><label class="fl">Prénom</label><input type="text" class="fi" name="prenom" placeholder="Jean" required></div>
+            <div class="fg"><label class="fl">Nom</label><input type="text" class="fi" name="nom" placeholder="Dupont" required></div>
+          </div>
+          <div class="fg"><label class="fl">Email professionnel</label><input type="email" class="fi" name="email" placeholder="jean.dupont@marque.com" required></div>
+          <div class="fg"><label class="fl">Marque / Société</label><input type="text" class="fi" name="societe" placeholder="Nom de votre marque" required></div>
+          <div class="fg">
+            <label class="fl">Objet de la demande</label>
+            <select class="fi" name="objet">
+              <option value="">Sélectionner...</option>
+              <option>Sell-In — Réseau commercial</option>
+              <option>Sell-Out — Formation &amp; activation</option>
+              <option>Digital — LSR Agence</option>
+              <option>Médias — Stratego</option>
+              <option>Approche globale 360°</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Message</label><textarea class="fi" name="message" placeholder="Décrivez votre projet et vos objectifs..."></textarea></div>
+          <button type="submit" class="form-btn">
+            Envoyer le message
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div id="form-ok" class="form-ok">Message envoyé — nous vous contacterons sous 48h.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+
+<footer>
+  <div class="ft">
+    <div class="ft-main">
+      <div class="ft-brand-col">
+        <a href="#hero" class="ft-logo"><img src="assets/logo.png" alt="JP &amp; HP Consulting"></a>
+        <p class="ft-desc"><strong>JP &amp; HP Consulting</strong><br>Direction Commerciale &amp; Excellence Opérationnelle. L'écosystème commercial 360° : Sell-In, Sell-Out &amp; Digital.</p>
+        <div class="ft-social-label">Réseaux sociaux</div>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z"/></svg>
+          </a>
+          <a href="mailto:contact@jphp-consulting.fr" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ft-contact-col ft-contact">
+        <div class="ft-col-h">Coordonnées</div>
+        <p><strong>Adresse</strong>Paris, France — interventions nationales</p>
+        <p><strong>Telephone</strong>Sur demande</p>
+        <p><strong>Email</strong>contact@jphp-consulting.fr</p>
+      </div>
+
+      <div class="ft-util-col">
+        <div class="ft-col-h">À propos</div>
+        <ul class="ft-util">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#vision">Notre approche</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#experts">L'équipe</a></li>
+          <li><a href="#marques">Marques</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <div class="ft-copy">&copy; 2026 JP &amp; HP Consulting — Tous droits réservés</div>
+      <div class="ft-legal">
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts (see js/main.js) — defer: runs after HTML parse -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
